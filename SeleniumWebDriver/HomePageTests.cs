@@ -8,6 +8,9 @@ namespace SeleniumWebDriver
     [TestClass]
     public class HomePageTests
     {
+        string username;
+        string password;
+
         IWebDriver driver;
 
         [TestInitialize]
@@ -28,14 +31,16 @@ namespace SeleniumWebDriver
         [TestMethod]
         public void Test001LoginWithValidInput()
         {
-            var username = "emp1@fluxday.io";
-            var password = "password";
+            username = "emp1@fluxday.io";
+            password = "password";
 
             var usernameTextBox = driver.FindElement(By.XPath("//*[@id=\"user_email\"]"));
             var passwordTextBox = driver.FindElement(By.XPath("//*[@id=\"user_password\"]"));
 
+            usernameTextBox.Clear();
             usernameTextBox.SendKeys(username);
 
+            passwordTextBox.Clear();
             passwordTextBox.SendKeys(password);
 
             var loginButton = driver.FindElement(By.XPath("//*[@id=\"new_user\"]/div[2]/div[3]/button"));
@@ -57,14 +62,16 @@ namespace SeleniumWebDriver
         [TestMethod]
         public void Test002LoginWithInvalidInput()
         {
-            var username = "asdf@fluxday.io";
-            var password = "asdf";
+            username = "asdf@fluxday.io";
+            password = "asdf";
 
             var usernameTextBox = driver.FindElement(By.XPath("//*[@id=\"user_email\"]"));
             var passwordTextBox = driver.FindElement(By.XPath("//*[@id=\"user_password\"]"));
 
+            usernameTextBox.Clear();
             usernameTextBox.SendKeys(username);
 
+            passwordTextBox.Clear();
             passwordTextBox.SendKeys(password);
 
             var loginButton = driver.FindElement(By.XPath("//*[@id=\"new_user\"]/div[2]/div[3]/button"));
@@ -82,14 +89,16 @@ namespace SeleniumWebDriver
         [TestMethod]
         public void Test003LogoutButton()
         {
-            var username = "emp1@fluxday.io";
-            var password = "password";
+            username = "emp1@fluxday.io";
+            password = "password";
 
             var usernameTextBox = driver.FindElement(By.XPath("//*[@id=\"user_email\"]"));
             var passwordTextBox = driver.FindElement(By.XPath("//*[@id=\"user_password\"]"));
 
+            usernameTextBox.Clear();
             usernameTextBox.SendKeys(username);
 
+            passwordTextBox.Clear();
             passwordTextBox.SendKeys(password);
 
             var loginButton = driver.FindElement(By.XPath("//*[@id=\"new_user\"]/div[2]/div[3]/button"));
@@ -111,14 +120,16 @@ namespace SeleniumWebDriver
         [TestMethod]
         public void Test004UserEmployeeInformationButton()
         {
-            var username = "emp1@fluxday.io";
-            var password = "password";
+            username = "emp1@fluxday.io";
+            password = "password";
 
             var usernameTextBox = driver.FindElement(By.XPath("//*[@id=\"user_email\"]"));
             var passwordTextBox = driver.FindElement(By.XPath("//*[@id=\"user_password\"]"));
 
+            usernameTextBox.Clear();
             usernameTextBox.SendKeys(username);
 
+            passwordTextBox.Clear();
             passwordTextBox.SendKeys(password);
 
             var loginButton = driver.FindElement(By.XPath("//*[@id=\"new_user\"]/div[2]/div[3]/button"));
@@ -143,14 +154,16 @@ namespace SeleniumWebDriver
         public void Test005EditNicknameAsEmployee()
         {
 
-            var username = "emp1@fluxday.io";
-            var password = "password";
+            username = "emp1@fluxday.io";
+            password = "password";
 
             var usernameTextBox = driver.FindElement(By.XPath("//*[@id=\"user_email\"]"));
             var passwordTextBox = driver.FindElement(By.XPath("//*[@id=\"user_password\"]"));
 
+            usernameTextBox.Clear();
             usernameTextBox.SendKeys(username);
 
+            passwordTextBox.Clear();
             passwordTextBox.SendKeys(password);
 
             var loginButton = driver.FindElement(By.XPath("//*[@id=\"new_user\"]/div[2]/div[3]/button"));

@@ -1,0 +1,5 @@
+﻿[9/27/2018 1:47:10 PM Warning] Build failed or it was cancelled.
+[9/27/2018 1:47:12 PM Informational] ------ Discover test started ------
+[9/27/2018 1:47:14 PM Informational] ========== Discover test finished: 5 found (0:00:01.5390264) ==========
+[9/27/2018 1:47:16 PM Informational] ------ Run test started ------
+[9/27/2018 1:48:41 PM Informational] ========== Run test finished: 5 run (0:01:24.5396675) ==========
